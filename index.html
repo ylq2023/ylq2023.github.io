@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="杨立强 — C++ 开发工程师在线简历 · C++ / Qt / Linux / RPC。西安工业大学软件工程，专注 C++ 后端与 Qt 桌面开发。">
+  <meta name="theme-color" content="#04060e">
+  <title>杨立强 · C++ 开发工程师</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23070b17'/%3E%3Cpath d='M18 18l14 15 14-15M32 33v14' stroke='url(%23g)' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- SVG icon sprite -->
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="8" r="2.5"/><path d="M6 8.5v7M18 10.5c0 3-3 3.5-6 3.5H8.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5"/><path d="M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7" rx="1"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 6-5 6 5 6M16 6l5 6-5 6M13.5 4l-3 16"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2.5l2.3 6.4L21 11l-6.7 2.1L12 19.5l-2.3-6.4L3 11l6.7-2.1L12 2.5Z"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 3h8v6a4 4 0 0 1-8 0V3Z"/><path d="M8 5H4v2a4 4 0 0 0 4 4M16 5h4v2a4 4 0 0 1-4 4M12 13v5M8 21h8M9 18h6"/></symbol>
+    <symbol id="i-cert" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></symbol>
+  </svg>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="aurora aurora-cyan" aria-hidden="true"></div>
+  <div class="aurora aurora-violet" aria-hidden="true"></div>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header-inner">
+      <a class="brand" href="#view-resume" data-view-link="resume" aria-label="杨立强 · 首页">
+        <span class="brand-logo mono">YLQ</span>
+        <span class="brand-text">
+          <span class="brand-name">杨立强</span>
+          <span class="brand-sub mono">C++ DEVELOPER</span>
+        </span>
+      </a>
+
+      <nav class="tabs" role="tablist" aria-label="页面切换">
+        <button class="tab active" role="tab" aria-selected="true" aria-controls="view-resume" id="tab-resume" data-view="resume">
+          <svg class="icon"><use href="#i-code"></use></svg>简历
+        </button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="view-portfolio" id="tab-portfolio" data-view="portfolio">
+          <svg class="icon"><use href="#i-folder"></use></svg>作品展示
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-link" href="https://gitee.com/yang-liqiang1876" target="_blank" rel="noopener" title="访问 Gitee 代码库" aria-label="访问 Gitee 代码库">
+          <svg class="icon"><use href="#i-git"></use></svg>
+        </a>
+        <button class="btn-print" id="printBtn" type="button" title="打印或导出 PDF">
+          <svg class="icon"><use href="#i-print"></use></svg><span>导出 PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== VIEW: RESUME ==================== -->
+    <section id="view-resume" class="view active" role="tabpanel" aria-labelledby="tab-resume">
+      <div class="hero-section">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow reveal"><span class="pulse-dot"></span>OPEN TO WORK <span class="eyebrow-sep">/</span> 2027 届本科</p>
+            <h1 class="hero-title reveal">你好，我是<span class="grad-text">杨立强</span></h1>
+            <div class="role-line reveal">
+              <span class="prompt mono">&gt;_</span>
+              <span id="roleTyped" class="mono">C++ 开发工程师</span><span class="role-print mono">C++ 开发工程师</span><span class="caret" aria-hidden="true"></span>
+            </div>
+            <p class="hero-desc reveal">
+              软件工程本科生，专注 <strong>C++ 后端</strong> 与 <strong>Qt 桌面开发</strong>。
+              从网络协议、并发模型到桌面框架，喜欢把复杂系统拆成清晰、可靠的模块。
+            </p>
+
+            <div class="hero-tags reveal">
+              <span class="tag">C++11 / 14</span>
+              <span class="tag">Qt5</span>
+              <span class="tag">Linux</span>
+              <span class="tag">epoll</span>
+              <span class="tag">RPC</span>
+            </div>
+
+            <div class="hero-actions reveal">
+              <button class="btn btn-primary" type="button" data-view-link="portfolio">
+                查看作品 <svg class="icon"><use href="#i-arrow-right"></use></svg>
+              </button>
+              <a class="btn btn-ghost" href="assets/resume.pdf" download="杨立强-c++开发工程师.pdf">
+                <svg class="icon"><use href="#i-download"></use></svg>下载简历 PDF
+              </a>
+            </div>
+
+            <div class="contact-row reveal">
+              <a class="contact-chip" href="tel:18792433769">
+                <svg class="icon"><use href="#i-phone"></use></svg><span>187-9243-3769</span>
+              </a>
+              <button class="contact-chip" type="button" data-copy="3246332238@qq.com" title="点击复制邮箱">
+                <svg class="icon"><use href="#i-mail"></use></svg><span>3246332238@qq.com</span>
+                <svg class="icon copy-mini"><use href="#i-copy"></use></svg>
+              </button>
+              <a class="contact-chip" href="https://gitee.com/yang-liqiang1876" target="_blank" rel="noopener">
+                <svg class="icon"><use href="#i-git"></use></svg><span>gitee.com/yang-liqiang1876</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="profile-wrap reveal">
+            <div class="profile-halo" aria-hidden="true"></div>
+            <div class="profile-card" id="tiltCard">
+              <div class="profile-bar">
+                <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="profile-file mono">~/yang_liqiang.profile</span>
+                <span class="live-pill mono"><i></i>ONLINE</span>
+              </div>
+              <div class="photo-frame">
+                <img src="assets/avatar.jpg" alt="杨立强照片" width="1086" height="1448">
+                <span class="scan-line" aria-hidden="true"></span>
+                <span class="photo-grid" aria-hidden="true"></span>
+                <span class="frame-corner tl" aria-hidden="true"></span>
+                <span class="frame-corner tr" aria-hidden="true"></span>
+                <span class="frame-corner bl" aria-hidden="true"></span>
+                <span class="frame-corner br" aria-hidden="true"></span>
+                <span class="photo-tag mono">XATU · SE</span>
+              </div>
+              <div class="profile-info">
+                <div>
+                  <strong>杨立强</strong>
+                  <span class="profile-role mono">C++ / QT / LINUX</span>
+                </div>
+                <span class="year-badge mono">2027</span>
+              </div>
+              <div class="profile-hud mono">
+                <span><em>EDU</em>西安工业大学</span>
+                <span><em>STATUS</em><i class="hud-dot"></i>求职中</span>
+              </div>
+            </div>
+            <span class="float-chip fc1 mono" aria-hidden="true">C++14</span>
+            <span class="float-chip fc2 mono" aria-hidden="true">epoll</span>
+            <span class="float-chip fc3 mono" aria-hidden="true">Qt5</span>
+            <span class="float-chip fc4 mono" aria-hidden="true">RPC</span>
+          </div>
+        </div>
+
+        <div class="wrap stats">
+          <div class="stat glass reveal">
+            <span class="stat-icon"><svg class="icon"><use href="#i-layers"></use></svg></span>
+            <span class="stat-num mono" data-count="3">00</span>
+            <span class="stat-label"><strong>完整项目</strong><span>RPC · OJ · Agent</span></span>
+          </div>
+          <div class="stat glass reveal">
+            <span class="stat-icon"><svg class="icon"><use href="#i-briefcase"></use></svg></span>
+            <span class="stat-num mono" data-count="1">00</span>
+            <span class="stat-label"><strong>研发实习</strong><span>企业级桌面软件</span></span>
+          </div>
+          <div class="stat glass reveal">
+            <span class="stat-icon"><svg class="icon"><use href="#i-trophy"></use></svg></span>
+            <span class="stat-num mono" data-count="2">00</span>
+            <span class="stat-label"><strong>竞赛 &amp; 证书</strong><span>蓝桥杯省二 · CET-4</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="section-index mono">01</span>
+            <div class="section-title">
+              <h2>教育背景</h2>
+              <span class="section-en mono">EDUCATION &amp; HONORS</span>
+            </div>
+            <span class="section-line"></span>
+          </div>
+
+          <div class="edu-card glass reveal">
+            <div class="edu-main">
+              <span class="edu-logo mono">XATU</span>
+              <div class="edu-school">
+                <h3>西安工业大学</h3>
+                <p>软件工程 · 本科</p>
+              </div>
+              <span class="edu-date mono"><svg class="icon"><use href="#i-calendar"></use></svg>2023.09 — 2027.06</span>
+            </div>
+            <div class="edu-awards">
+              <div class="award">
+                <span class="award-icon award-amber"><svg class="icon"><use href="#i-trophy"></use></svg></span>
+                <div>
+                  <strong>第十六届蓝桥杯 · 省赛二等奖</strong>
+                  <span>算法与程序设计竞赛</span>
+                </div>
+              </div>
+              <div class="award">
+                <span class="award-icon award-cyan"><svg class="icon"><use href="#i-cert"></use></svg></span>
+                <div>
+                  <strong>全国大学英语四级（CET-4）</strong>
+                  <span>已通过</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="section-index mono">02</span>
+            <div class="section-title">
+              <h2>实习经历</h2>
+              <span class="section-en mono">INTERNSHIP</span>
+            </div>
+            <span class="section-line"></span>
+          </div>
+
+          <article class="exp-card glass reveal">
+            <header class="exp-head">
+              <span class="exp-logo mono">朗威</span>
+              <div class="exp-title">
+                <h3>山东远大朗威教育科技股份有限公司</h3>
+                <p>研究院 <span class="sep">/</span> C++ 研发实习生</p>
+              </div>
+              <span class="exp-date mono">2026.06 — 2026.08</span>
+            </header>
+
+            <div class="exp-project">
+              <div class="exp-project-head">
+                <strong>朗威 DisLib 8.0 · 数字化实验桌面平台</strong>
+                <div class="tag-row">
+                  <span class="tag">Qt5</span>
+                  <span class="tag">C++14</span>
+                  <span class="tag">Qwt</span>
+                  <span class="tag">QSS</span>
+                  <span class="tag">QPluginLoader</span>
+                  <span class="tag">CMake</span>
+                  <span class="tag">MSVC / GCC</span>
+                </div>
+              </div>
+              <p>
+                面向中小学物理、化学、生物数字化实验场景，支持 BLE / USB 双模传感器数据采集、
+                实时波形绘制、智能计算表格与公式引擎。
+              </p>
+            </div>
+
+            <div class="exp-points">
+              <div class="point">
+                <span class="point-num mono">01</span>
+                <div>
+                  <h4>定制化开发与版本迭代</h4>
+                  <p>基于 Qt5 与 C++14，承担 DisLib 8.0 初高中理化生非标实验模块的定制化开发；独立完成客户特化需求的 UI 样式与业务逻辑二次开发，并主导主分支代码集成与版本打包发布。</p>
+                </div>
+              </div>
+              <div class="point">
+                <span class="point-num mono">02</span>
+                <div>
+                  <h4>核心模块重构与框架迁移</h4>
+                  <p>主导遗留系统业务模块的技术栈升级，将早期基于 MFC 框架的经典实验重构并完整迁移至 Qt 架构，确保核心物理逻辑的准确复现与跨框架的性能优化。</p>
+                </div>
+              </div>
+              <div class="point">
+                <span class="point-num mono">03</span>
+                <div>
+                  <h4>跨平台适配与国产化推进</h4>
+                  <p>参与软件环境的跨平台兼容性开发，协助推进 Qt 版本桌面软件向银河麒麟（Kylin）等国产操作系统的代码移植、环境适配与编译调优工作。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-notes">
+              <span class="exp-notes-label mono">TECH DETAILS</span>
+              <div class="tag-row">
+                <span class="tag tag-accent">BLE / USB 双模通信</span>
+                <span class="tag tag-accent">观察者模式传感器框架</span>
+                <span class="tag tag-accent">滑动窗口多项式拟合滤波</span>
+                <span class="tag tag-accent">峰谷追踪状态机</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="section-index mono">03</span>
+            <div class="section-title">
+              <h2>专业技能</h2>
+              <span class="section-en mono">TECHNICAL SKILLS</span>
+            </div>
+            <span class="section-line"></span>
+          </div>
+
+          <div class="skills-grid" data-reveal-group>
+            <article class="skill-card glass reveal" style="--accent:#22d3ee; --accent-soft:rgba(34,211,238,.1); --accent-border:rgba(34,211,238,.28); --level:94%">
+              <div class="skill-head">
+                <span class="skill-icon"><svg class="icon"><use href="#i-code"></use></svg></span>
+                <h3>C / C++ 与底层基础</h3>
+                <span class="skill-level mono">熟练</span>
+              </div>
+              <ul class="skill-points">
+                <li>熟练掌握 C/C++ 语法与面向对象编程，深入理解内存管理与多态机制。</li>
+                <li>熟练运用 C++11/14 新特性：智能指针、右值引用、Lambda、future / promise。</li>
+                <li>熟悉 STL 底层机制与核心容器实现；扎实掌握红黑树、哈希表、堆与常用算法。</li>
+              </ul>
+              <div class="skill-meter"><span class="meter-fill"></span></div>
+            </article>
+
+            <article class="skill-card glass reveal" style="--accent:#818cf8; --accent-soft:rgba(129,140,248,.1); --accent-border:rgba(129,140,248,.28); --level:88%">
+              <div class="skill-head">
+                <span class="skill-icon"><svg class="icon"><use href="#i-layers"></use></svg></span>
+                <h3>跨平台 GUI · Qt</h3>
+                <span class="skill-level mono">熟悉</span>
+              </div>
+              <ul class="skill-points">
+                <li>熟悉 Qt 框架及核心组件，深入理解 QObject 对象模型与对象树内存管理机制。</li>
+                <li>深入理解信号与槽（Signal &amp; Slot）的底层通信原理。</li>
+                <li>具备 QPluginLoader、QSS、Qwt 在真实商业桌面项目中的实践经验。</li>
+              </ul>
+              <div class="skill-meter"><span class="meter-fill"></span></div>
+            </article>
+
+            <article class="skill-card glass reveal" style="--accent:#2dd4bf; --accent-soft:rgba(45,212,191,.1); --accent-border:rgba(45,212,191,.28); --level:90%">
+              <div class="skill-head">
+                <span class="skill-icon"><svg class="icon"><use href="#i-terminal"></use></svg></span>
+                <h3>Linux 系统与网络</h3>
+                <span class="skill-level mono">熟练</span>
+              </div>
+              <ul class="skill-points">
+                <li>熟悉 Linux 开发环境与工具链（GCC、GDB、Git）。</li>
+                <li>深入理解多进程 / 多线程并发模型及 IPC 机制，具备处理复杂同步互斥与临界区竞争的实战经验。</li>
+                <li>熟练掌握 TCP/IP 协议栈，熟练基于 epoll 实现 I/O 多路复用与高并发 Socket 编程。</li>
+              </ul>
+              <div class="skill-meter"><span class="meter-fill"></span></div>
+            </article>
+
+            <article class="skill-card glass reveal" style="--accent:#fbbf24; --accent-soft:rgba(251,191,36,.1); --accent-border:rgba(251,191,36,.26); --level:80%">
+              <div class="skill-head">
+                <span class="skill-icon"><svg class="icon"><use href="#i-database"></use></svg></span>
+                <h3>数据库应用</h3>
+                <span class="skill-level mono">熟悉</span>
+              </div>
+              <ul class="skill-points">
+                <li>熟悉 MySQL 关系型数据库，掌握表结构设计与常用 SQL。</li>
+                <li>熟悉 SQLite 轻量级本地化应用，理解本地持久化与会话存储场景。</li>
+              </ul>
+              <div class="skill-meter"><span class="meter-fill"></span></div>
+            </article>
+
+            <article class="skill-card glass reveal" style="--accent:#c084fc; --accent-soft:rgba(192,132,252,.1); --accent-border:rgba(192,132,252,.28); --level:82%">
+              <div class="skill-head">
+                <span class="skill-icon"><svg class="icon"><use href="#i-spark"></use></svg></span>
+                <h3>工程效能与扩展</h3>
+                <span class="skill-level mono">具备</span>
+              </div>
+              <ul class="skill-points">
+                <li>具备 Python 开发能力（FastAPI / 脚本编写）。</li>
+                <li>熟练运用 Claude Code 等现代化 AI 辅助编程工具链，辅助复杂工程重构与效能提升。</li>
+                <li>熟悉 CMake 构建体系与 MSVC / GCC 跨工具链编译调试。</li>
+              </ul>
+              <div class="skill-meter"><span class="meter-fill"></span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="section-index mono">04</span>
+            <div class="section-title">
+              <h2>项目经历</h2>
+              <span class="section-en mono">SELECTED PROJECTS</span>
+            </div>
+            <span class="section-line"></span>
+            <button class="head-link" type="button" data-view-link="portfolio">
+              查看作品便签 <svg class="icon"><use href="#i-arrow-up-right"></use></svg>
+            </button>
+          </div>
+
+          <div class="projects" data-reveal-group>
+            <!-- RPC -->
+            <article class="project-card glass reveal" style="--project-accent:#22d3ee; --project-soft:rgba(34,211,238,.08); --project-border:rgba(34,211,238,.28)">
+              <header class="project-top">
+                <div>
+                  <p class="project-kicker mono">PROJECT 01 <span class="sep">/</span> 2025.05 — 2025.08</p>
+                  <h3>轻量级 C++ 微服务与 RPC 调度总线</h3>
+                </div>
+                <a class="mini-link" href="https://gitee.com/yang-liqiang1876/standard-server-project" target="_blank" rel="noopener">
+                  源码 <svg class="icon"><use href="#i-arrow-up-right"></use></svg>
+                </a>
+              </header>
+              <p class="project-summary">
+                一个基于现代 C++ 构建的高性能 RPC 远程调用框架：以自定义应用层协议与 I/O 多路复用模型支撑高并发场景，
+                深度封装网络传输与数据序列化细节，让跨节点服务调用像本地函数一样自然。
+              </p>
+              <ul class="project-points">
+                <li><span class="point-key">网络通信</span>基于 Muduo 库实现 Reactor 模式高并发 TCP 服务器，支持多线程事件循环与连接池管理</li>
+                <li><span class="point-key">协议设计</span>自定义应用层协议，采用 JSON 序列化实现跨语言 RPC 通信，支持请求 — 响应消息路由</li>
+                <li><span class="point-key">调用模式</span>封装同步阻塞（future / promise）与异步非阻塞（回调）两种调用语义，请求 ID 精准路由</li>
+                <li><span class="point-key">服务治理</span>注册中心支持服务自动注册发现；发布订阅消息总线支持主题广播与订阅者路由</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">C++14</span><span class="tag">Muduo</span><span class="tag">epoll</span>
+                <span class="tag">TCP/IP</span><span class="tag">自定义协议</span><span class="tag">JSON</span>
+              </div>
+            </article>
+
+            <!-- OJ -->
+            <article class="project-card glass reveal" style="--project-accent:#fbbf24; --project-soft:rgba(251,191,36,.08); --project-border:rgba(251,191,36,.26)">
+              <header class="project-top">
+                <div>
+                  <p class="project-kicker mono">PROJECT 02 <span class="sep">/</span> 2025.08 — 2025.10</p>
+                  <h3>支持集群调度的轻量级 OJ 引擎</h3>
+                </div>
+                <a class="mini-link" href="https://gitee.com/yang-liqiang1876/load-balancing-with-olinejudge" target="_blank" rel="noopener">
+                  源码 <svg class="icon"><use href="#i-arrow-up-right"></use></svg>
+                </a>
+              </header>
+              <p class="project-summary">
+                基于 C++ 构建的负载均衡在线判题系统：采用前后端分离架构与多机负载均衡设计支撑高并发判题，
+                封装代码编译、沙箱运行与结果比对的完整链路，用户可通过 Web 界面提交代码并实时获取判题结果。
+              </p>
+              <ul class="project-points">
+                <li><span class="point-key">网络通信</span>基于 cpp-httplib 实现 HTTP 服务器，提供 Web 接口服务</li>
+                <li><span class="point-key">数据存储</span>采用 MySQL 存储题目信息，文件系统管理测试用例</li>
+                <li><span class="point-key">编译运行</span>封装 g++ 编译器与进程控制，实现代码编译、多进程沙箱运行与 CPU / 内存资源限制</li>
+                <li><span class="point-key">负载均衡</span>基于轮询算法实现多编译服务器任务分发，支持故障检测与自动恢复</li>
+                <li><span class="point-key">判题服务</span>对比用户输出与标准答案，返回详细判题结果与错误信息</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">C++14</span><span class="tag">cpp-httplib</span><span class="tag">MySQL</span>
+                <span class="tag">多进程沙箱</span><span class="tag">负载均衡</span>
+              </div>
+            </article>
+
+            <!-- Medical Agent -->
+            <article class="project-card glass reveal" style="--project-accent:#c084fc; --project-soft:rgba(192,132,252,.08); --project-border:rgba(192,132,252,.28)">
+              <header class="project-top">
+                <div>
+                  <p class="project-kicker mono">PROJECT 03 <span class="sep">/</span> 2026.04 — 2026.06</p>
+                  <h3>SmartMedical-Agent 多模态智能医疗诊断系统</h3>
+                </div>
+                <a class="mini-link" href="https://gitee.com/yang-liqiang1876/smart-medical-agent" target="_blank" rel="noopener">
+                  源码 <svg class="icon"><use href="#i-arrow-up-right"></use></svg>
+                </a>
+              </header>
+              <p class="project-summary">
+                基于 LangGraph 构建的智能医疗问诊 Agent：三轨检索（本地知识库 + 联网搜索 + 学术文献）结合多模态影像分析，
+                通过状态图驱动的多轮对话与流式推送，为用户提供疾病预测、治疗建议与影像解读服务。
+              </p>
+              <ul class="project-points">
+                <li><span class="point-key">对话引擎</span>LangGraph 状态机驱动意图分类 → 工具调用 → 回复生成，支持多轮工具循环与并行</li>
+                <li><span class="point-key">知识检索</span>FAISS 本地向量库优先命中，博查 AI 补充中文资讯，PubMed 检索英文文献，支持并行调用与结果缓存</li>
+                <li><span class="point-key">影像分析</span>集成 Qwen-VL-Plus，图片自动压缩后流式直出分析报告，跳过 Agent 循环实现低延迟响应</li>
+                <li><span class="point-key">流式架构</span>FastAPI 异步 SSE 端点，工具进度实时推送 + 回复分块流式输出，SQLite 持久化会话自动恢复</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Python 3.13</span><span class="tag">LangGraph</span><span class="tag">RAG</span>
+                <span class="tag">FastAPI</span><span class="tag">FAISS</span><span class="tag">Qwen-VL-Plus</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="section-index mono">05</span>
+            <div class="section-title">
+              <h2>联系我</h2>
+              <span class="section-en mono">GET IN TOUCH</span>
+            </div>
+            <span class="section-line"></span>
+          </div>
+
+          <div class="contact-panel reveal">
+            <div class="contact-copy">
+              <p class="eyebrow"><span class="pulse-dot"></span>LET'S BUILD SOMETHING</p>
+              <h2>期待一个能把 C++<br>写进真实系统的机会。</h2>
+              <p class="contact-desc">无论是后端服务、桌面客户端，还是有意思的工程问题，都欢迎与我聊聊。</p>
+              <div class="hero-actions">
+                <button class="btn btn-primary" type="button" data-copy="3246332238@qq.com">
+                  <svg class="icon"><use href="#i-mail"></use></svg>复制邮箱
+                </button>
+                <a class="btn btn-ghost" href="https://gitee.com/yang-liqiang1876" target="_blank" rel="noopener">
+                  <svg class="icon"><use href="#i-git"></use></svg>Gitee 主页
+                </a>
+                <a class="btn btn-ghost" href="tel:18792433769">
+                  <svg class="icon"><use href="#i-phone"></use></svg>187-9243-3769
+                </a>
+              </div>
+            </div>
+
+            <div class="code-card">
+              <div class="code-bar">
+                <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="mono">contact.cpp</span>
+                <span class="code-status mono"><i></i>READY</span>
+              </div>
+              <pre class="code-body mono" aria-label="联系方式代码片段"><code><span class="c-comment">// 期待与你一起构建下一篇代码</span>
+<span class="c-key">struct</span> <span class="c-type">Contact</span> {
+    <span class="c-type">std::string</span> email <span class="c-op">=</span> <span class="c-str">"3246332238@qq.com"</span>;
+    <span class="c-type">std::string</span> phone <span class="c-op">=</span> <span class="c-str">"187-9243-3769"</span>;
+    <span class="c-type">std::string</span> gitee <span class="c-op">=</span> <span class="c-str">"gitee.com/yang-liqiang1876"</span>;
+};
+
+<span class="c-type">Contact</span> me{};
+<span class="c-comment">// status: OPEN TO WORK</span><span class="code-caret" aria-hidden="true">▍</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="wrap footer-inner">
+          <span class="mono">© <span id="year">2026</span> 杨立强 · 在线简历</span>
+          <span class="footer-status mono"><i></i>SYSTEM ONLINE</span>
+        </div>
+      </footer>
+    </section>
+
+    <!-- ==================== VIEW: PORTFOLIO ==================== -->
+    <section id="view-portfolio" class="view" role="tabpanel" aria-labelledby="tab-portfolio">
+      <div class="portfolio-section">
+        <div class="wrap">
+          <div class="portfolio-hero">
+            <p class="eyebrow reveal"><span class="pulse-dot"></span>PORTFOLIO <span class="eyebrow-sep">/</span> STICKY NOTES</p>
+            <h1 class="reveal">作品<span class="grad-text">展示</span></h1>
+            <p class="portfolio-desc reveal">
+              把想法钉在便签上，让代码跑在网络里。下面是我从零实现与正在规划的项目，
+              规划中的项目也会持续更新。
+            </p>
+            <div class="portfolio-meta reveal">
+              <span class="hint-chip"><svg class="icon"><use href="#i-spark"></use></svg>便签上的「本机预览」可直达本地运行的服务</span>
+              <span class="hint-chip"><svg class="icon"><use href="#i-terminal"></use></svg>端口可在下方服务面板中配置</span>
+            </div>
+          </div>
+
+          <div class="sticky-grid" data-reveal-group>
+            <!-- Medical note -->
+            <article class="note tone-violet reveal" style="--rot:-1.4deg">
+              <span class="note-tape" aria-hidden="true"></span>
+              <div class="note-head">
+                <span class="note-num mono">NOTE_01</span>
+                <span class="note-status mono" data-note-status="medical"><i></i><span>STANDBY</span></span>
+              </div>
+              <p class="note-kicker mono">2026.04 — 2026.06</p>
+              <h3>SmartMedical-Agent<br>多模态医疗诊断系统</h3>
+              <p class="note-desc">LangGraph 驱动的智能问诊 Agent，三轨检索配合影像分析。</p>
+              <ul class="note-list">
+                <li>本地 FAISS / 联网搜索 / PubMed 三轨检索</li>
+                <li>Qwen-VL-Plus 多模态影像解读</li>
+                <li>FastAPI SSE 流式输出与多轮工具循环</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">FastAPI</span><span class="tag">FAISS</span>
+              </div>
+              <div class="note-foot">
+                <a class="note-link" href="https://gitee.com/yang-liqiang1876/smart-medical-agent" target="_blank" rel="noopener">
+                  源码 <svg class="icon"><use href="#i-arrow-up-right"></use></svg>
+                </a>
+                <button class="note-demo" type="button" data-demo="medical">
+                  <i class="demo-dot"></i><span>本机预览</span><svg class="icon"><use href="#i-arrow-right"></use></svg>
+                </button>
+              </div>
+              <span class="note-fold" aria-hidden="true"></span>
+            </article>
+
+            <!-- Fruit note (planned) -->
+            <article class="note tone-green reveal" style="--rot:1.1deg">
+              <span class="note-tape" aria-hidden="true"></span>
+              <div class="note-head">
+                <span class="note-num mono">NOTE_02</span>
+                <span class="note-status is-planned mono"><i></i><span>PLANNED</span></span>
+              </div>
+              <p class="note-kicker mono">2026.10 — 后续开发</p>
+              <h3>智能水果识别<br>系统</h3>
+              <p class="note-desc">基于视觉模型的水果种类识别项目，目前处于规划阶段，即将开始开发。</p>
+              <ul class="note-list">
+                <li>采集常见水果图像，构建并增强数据集</li>
+                <li>CNN / 迁移学习模型训练与调优</li>
+                <li>摄像头实时识别与 Web 端演示界面</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">OpenCV</span><span class="tag">CNN</span>
+              </div>
+              <div class="note-foot">
+                <span class="note-soon mono">IN DEVELOPMENT · 敬请期待</span>
+              </div>
+              <span class="note-fold" aria-hidden="true"></span>
+            </article>
+          </div>
+
+          <!-- Local service console -->
+          <div class="console glass reveal">
+            <div class="console-bar">
+              <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="console-title mono">localhost — service registry</span>
+              <span class="console-badge mono" id="serviceBadge">0 / 1 CONFIGURED</span>
+            </div>
+            <div class="console-body">
+              <p class="console-cmd"><span class="prompt">$</span> cat ./ports.json <span class="console-cursor">▍</span></p>
+
+              <div class="services">
+                <div class="service-row" data-service="medical">
+                  <span class="svc-dot" aria-hidden="true"></span>
+                  <div class="svc-name">
+                    <strong>SmartMedical Agent</strong>
+                    <span class="svc-url mono">localhost:<span class="port-value">—</span></span>
+                  </div>
+                  <label class="port-field">
+                    <span>PORT</span>
+                    <input type="number" min="1" max="65535" placeholder="如 8501" autocomplete="off" data-port-input="medical" aria-label="SmartMedical Agent 端口号">
+                  </label>
+                  <button class="mini-btn svc-btn" type="button" data-open-service="medical">
+                    打开 <svg class="icon"><use href="#i-arrow-up-right"></use></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="console-foot">
+                <p class="console-hint">
+                  <svg class="icon"><use href="#i-terminal"></use></svg>
+                  端口配置保存在本机浏览器（localStorage），启动对应服务后点击「打开」即可跳转；配置仅代表端口已填写，服务状态以实际运行情况为准。
+                </p>
+                <button class="reset-ports mono" type="button" data-reset-ports>restore defaults</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-cta reveal">
+            <p>更多代码与提交记录，欢迎访问我的 Gitee。</p>
+            <a class="btn btn-ghost" href="https://gitee.com/yang-liqiang1876" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-git"></use></svg>gitee.com/yang-liqiang1876
+              <svg class="icon"><use href="#i-arrow-up-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <div class="wrap footer-inner">
+          <span class="mono">© <span class="footer-year">2026</span> 杨立强 · 在线简历</span>
+          <span class="footer-status mono"><i></i>SYSTEM ONLINE</span>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast-icon"><svg class="icon"><use href="#i-check"></use></svg></span>
+    <span id="toastMsg">已复制</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
